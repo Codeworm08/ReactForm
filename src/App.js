@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 function Disp({name,email,phone,grade}) {
   return (
@@ -87,11 +87,11 @@ function App() {
           <div onChange={handleGrade}>
           <label>Grade Earned:</label><br/>
           <label>A</label>
-          <input type="radio" name="grade" value="A" checked={grade=="A"}/>
+          <input type="radio" name="grade" value="A" checked={grade==="A"}/>
           <label>B</label>
-          <input type="radio" name="grade" value="B" checked={grade=="B"}/>
+          <input type="radio" name="grade" value="B" checked={grade==="B"}/>
           <label>C</label>
-          <input type="radio" name="grade" value="C" checked={grade=="C"}/>
+          <input type="radio" name="grade" value="C" checked={grade==="C"}/>
           </div>          
           <label>Phone:</label><br/>
           <input type="tel" value={phone} onChange={(e)=>{handlePhone(e)}}/><br/>
