@@ -53,9 +53,14 @@ function App() {
   const handleSubmit = (e)=>{
     e.preventDefault();
     let pattern=new RegExp("^(\\+?\\d{1,3}|\\+)?[\\d]{10}$");
-    if(password!=confPassword)
+    let namePattern= new RegExp("^[a-zA-Z]+$");
+    if(password!==confPassword)
     {
       alert("Password and Confirmation do not match!");
+    }
+    else if(!namePattern.test(name))
+    {
+      alert("Name must contain only alphabets!");
     }
     else if(!pattern.test(phone))
     {
